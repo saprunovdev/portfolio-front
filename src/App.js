@@ -1,5 +1,6 @@
-import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
+import { Container } from '@mui/system';
+import { Box, Typography } from '@mui/material';
+
 import './App.css';
 
 
@@ -7,15 +8,14 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Grid container spacing={1} style={{height:'100vh', backgroundColor: '#d0f2d6'}}>
-      <Grid item spacing={1} margin={2}>
+      <Container maxWidth="sm">
+      <Box sx={{ my: 4 }}>
+        <Typography variant="h4" component="h1" gutterBottom>
+          Site is under construction
+        </Typography>
 
-        <Button variant="contained" color="secondary">Contained</Button>
-
-        <Button variant="contained" color="secondary">Contained</Button>
-      </Grid>
-
-      </Grid>
+      </Box>
+    </Container>
     </div>
   );
 }
