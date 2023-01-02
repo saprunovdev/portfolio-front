@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
 import './App.css';
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Grid container spacing={1} style={{height:'100vh', backgroundColor: '#d0f2d6'}}>
+      <Grid item spacing={1} margin={2}>
+
+        <Button variant="contained" color="secondary">Contained</Button>
+
+        <Button variant="contained" color="secondary">Contained</Button>
+      </Grid>
+
+      </Grid>
     </div>
   );
 }
