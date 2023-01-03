@@ -1,0 +1,20 @@
+version: "3"
+
+networks:
+  web:
+    external: true
+  internal:
+    external: false
+
+services:
+  home:
+    image: saprunovdev/portfolio
+
+    labels:
+      - traefik.http.routers.home.rule=Host(`saprunov.dev`)
+      - traefik.http.routers.home.tls=true
+      - traefik.http.routers.home.tls.certresolver=lets-encrypt
+      - traefik.port=3000
+    networks:
+      - internal
+      - web
